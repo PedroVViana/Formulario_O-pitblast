@@ -1,0 +1,98 @@
+﻿<Window x:Class="FormO_pitblast.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FormO_pitblast"
+        mc:Ignorable="d"
+         WindowState="Normal"
+        WindowStyle="ToolWindow"
+        WindowStartupLocation="CenterScreen"
+        Title="Formulário" Height="650" Width="800"
+        Background="Transparent">
+    
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+      
+
+        <Border Grid.RowSpan="2" RenderTransformOrigin="0.462,0.501">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#fff" Offset="0.0"/>
+                    <GradientStop Color="#dd052b" Offset=".7"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <TextBlock HorizontalAlignment="Left" Height="191" Margin="88,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="383" Text="Formulário&#xA;" Foreground="#fff" Cursor="None" FontSize="36" FontWeight="Bold" FontStyle="Italic" FontFamily="Arial Black"/>
+
+        </Border>
+        <StackPanel>
+
+            <Image Margin="54,129,457,356" Source="/logo.png" Stretch="Fill" VerticalAlignment="Stretch"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right" Width="350" RenderTransformOrigin="0.484,0.504" Margin="-19,-38,18,0">
+            <Label Content="Nome completo:" HorizontalAlignment="Left" Height="36" Margin="-56,125,0,8" Width="209"
+                   FontWeight="Bold"
+                   FontFamily="arial"
+                   Foreground="#fff"
+                   FontSize="20"
+
+                   />
+            <TextBox x:Name="tb_name" Width="355" Height="25" Margin="-96,-9,0,0" ToolTip="Digite seu nome completo" ></TextBox>
+            <Label Content="Idade:" Height="35" Width="310"
+                   FontWeight="Bold"
+                   FontFamily="arial"
+                   Foreground="#fff"
+                   FontSize="22" Margin="-151,5,0,5"
+                   
+                   />
+            <TextBox x:Name="tb_idade" Width="351" Height="25" Margin="-96,0,0,0" MaxLength="2" ToolTip="Digite sua Idade" />
+            <Label Content="Email:" Height="28" Width="308"
+                   FontWeight="Bold"
+                   FontFamily="arial"
+                   Foreground="#fff"
+                   FontSize="20" Margin="-151,5,0,7"
+       
+                   />
+            <TextBox x:Name="tb_email" Width="355" Height="25" Margin="-96,0,0,0" ToolTip="Digite seu email"/>
+            <Label Content="Hobbies:" Height="35" Width="303"
+                   FontWeight="Bold"
+                   FontFamily="arial"
+                   Foreground="#fff"
+                   FontSize="20" Margin="-157,9,0,5"
+                   
+                   />
+            <TextBox x:Name="tb_Hobbies" Width="356" Height="55" Margin="-96,0,0,0" MaxLength="100" ToolTip="Digite seu hobbies" />
+            <Button Content="Enviar" Height="59" Width="130" Background="#Fff" FontFamily="arial"
+                    Margin="98,30,30,30" 
+                    Foreground="#dd032b"
+                    Opacity="0.8"
+                    x:Name="Enviar"
+                    FontSize="14" IsDefault="True" Click="Enviar_Click" />
+            <Button Content="Redefinir" Height="59" Width="130" Background="#fff" FontFamily="arial"
+                    Foreground="#dd032b"
+                    FontSize="14"
+                    Opacity="0.8"
+                    Margin="-335,-118,-35,0" Click="Reset_Click"
+                   />
+            <Button Content="Informações" Height="59" Width="196" Background="#Fff" FontFamily="arial"
+                    Margin="-91,-2,30,30" 
+                    Foreground="#dd032b"
+                    Opacity="0.8"
+                    x:Name="inf"
+                    Command="{Binding Cadastro}" CommandParameter="{Binding ElementName=inf}"
+                    FontSize="14" IsDefault="True"  />
+
+
+
+
+        </StackPanel>
+
+
+    </Grid>
+
+
+</Window>
