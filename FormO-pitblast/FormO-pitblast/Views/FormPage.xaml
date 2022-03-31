@@ -1,0 +1,44 @@
+﻿<Window x:Class="FormO_pitblast.Views.PageInf"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FormO_pitblast.Views"
+        mc:Ignorable="d"
+        WindowState="Normal"
+        WindowStyle="ToolWindow"
+        WindowStartupLocation="CenterScreen"
+        Title="Informações Cadastras" Height="450" Width="800">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <Border Grid.RowSpan="2" RenderTransformOrigin="0.462,0.501">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#fff" Offset="0.0"/>
+                    <GradientStop Color="#dd052b" Offset=".7"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <TextBlock HorizontalAlignment="Left" Height="42" Margin="169,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="617" Foreground="#fff" Cursor="None" FontSize="34" FontWeight="Bold" FontStyle="Italic" FontFamily="Arial Black"><Run Language="pt-br" Text="{Binding Path=tb_nome}"/></TextBlock>
+
+        </Border>
+        <StackPanel>
+            <Image Margin="-159,21,457,356" Source="/logo.png" Stretch="Fill" Height="179" Width="192"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Text="{Binding Path=tb_idade}" Height="40" Width="128" Foreground="#FFF" FontSize="28" FontFamily="Arial" Margin="-303,125,0,-6" VerticalAlignment="Stretch" HorizontalAlignment="Center" FontStyle="Normal" FontWeight="Bold" TextDecorations="{x:Null}"/>
+            <TextBlock Text="{Binding Path=tb_email}" Foreground="#FFF" FontSize="28" FontFamily="Arial" Margin="183,7,0,0"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Text="Hobbies:" Margin="145,218,0,13" FontSize="28" FontFamily="Arial" Foreground="#FFF"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Text="{Binding Path=tb_Hobbies}" Margin="184,270,0,9" FontSize="28" FontFamily="Arial" Foreground="#FFF"/>
+           
+        </StackPanel>
+    </Grid>
+</Window>
